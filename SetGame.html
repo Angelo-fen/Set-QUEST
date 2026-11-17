@@ -60,6 +60,8 @@ footer{text-align:center;padding:30px}
                     <li><a href="#2d">6. Diseño 2D</a></li>
                     <li><a href="#3d">7. Diseño 3D</a></li>
                     <li><a href="#mp3">8. Música y sonidos</a></li>
+                    <li><a href="#web">9. Plantilla para sitio web</a></li>
+                    <li><a href="#git">10. Crear web con GitHub</a></li>
                 </ul>
             </nav>
         </details>
@@ -4432,7 +4434,231 @@ ZoneTO : MonoBehaviour
     
     <hr>
 
+<!-- PIE DE PÁGINA -->
+                  <section id="web">
+
+          
+    <h1>9. Elementos y estructura para pagina web </h1>
+
+<p>En esta parte se resume en 100 lineas de html todos y cada uno de los elementos y la estructura que empleamos para elaborar nuestra pagina web.</p>
+
+<details>
+                <summary>Plantilla.html</summary>
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Plantilla Base&lt;/title&gt;
+    &lt;style&gt;*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#000;color:#fff;font-family:Arial,sans-serif;line-height:1.6;padding-top:140px;}a{color:#6fdcff;text-decoration:none;}a:hover{text-decoration:underline;}hr{margin:20px 0;border:1px solid #333;}section{padding:20px;}table{width:100%;border-collapse:collapse;background:#111;}th,td{border:1px solid #444;padding:10px;}th{background:#222;}details{background:#111;border:1px solid #444;border-radius:10px;padding:10px;margin:10px 0;}summary{cursor:pointer;color:#6fdcff;font-weight:bold;}pre{background:#111;padding:10px;border-radius:10px;overflow:auto;}img,video{max-width:100%;height:auto;}audio{width:100%;}footer{text-align:center;padding:30px;}.logo-fijo{position:fixed;top:0;left:0;width:100%;background:#000;border-bottom:2px solid #333;text-align:center;padding:10px;z-index:9999;}.logo-fijo img{height:80px;}.menu-fijo{position:fixed;top:105px;right:15px;z-index:9999;}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- LOGO --&gt;
+    &lt;div class="logo-fijo"&gt;
+        &lt;img src="imagenes/logo.png" alt="Logo"&gt;
+    &lt;/div&gt;
+    &lt;!-- MENÚ --&gt;
+    &lt;details class="menu-fijo"&gt;
+        &lt;summary&gt;☰ MENÚ&lt;/summary&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/details&gt;
+    &lt;!-- INICIO --&gt;
+    &lt;section id="inicio"&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Título Principal&lt;/h1&gt;
+            &lt;p&gt;Descripción general del proyecto.&lt;/p&gt;
+        &lt;/header&gt;
+        &lt;hr&gt;
+        &lt;!-- IMAGEN --&gt;
+        &lt;h2&gt;Imagen&lt;/h2&gt;
+        &lt;img src="imagenes/ejemplo.png" alt="Ejemplo" width="300"&gt;
+        &lt;hr&gt;
+        &lt;!-- VIDEO --&gt;
+        &lt;h2&gt;Video&lt;/h2&gt;
+        &lt;video controls width="500"&gt;
+            &lt;source src="videos/video.mp4" type="video/mp4"&gt;
+        &lt;/video&gt;
+        &lt;hr&gt;
+        &lt;!-- AUDIO --&gt;
+        &lt;h2&gt;Audio&lt;/h2&gt;
+        &lt;audio controls&gt;
+            &lt;source src="audio/sonido.mp3" type="audio/mpeg"&gt;
+        &lt;/audio&gt;
+        &lt;hr&gt;
+        &lt;!-- TABLA --&gt;
+        &lt;h2&gt;Tabla&lt;/h2&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Columna 1&lt;/th&gt;
+                &lt;th&gt;Columna 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Dato A&lt;/td&gt;
+                &lt;td&gt;Dato B&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;hr&gt;
+        &lt;!-- DETAILS --&gt;
+        &lt;h2&gt;Contenido desplegable&lt;/h2&gt;
+        &lt;details&gt;
+            &lt;summary&gt;Mostrar contenido&lt;/summary&gt;
+            &lt;p&gt;Texto dentro del bloque desplegable.&lt;/p&gt;
+        &lt;/details&gt;
+        &lt;hr&gt;
+        &lt;!-- PRE --&gt;
+        &lt;h2&gt;Texto Formateado&lt;/h2&gt;
+        &lt;pre&gt;
+Carpeta/
+├── imagenes/
+├── videos/
+└── index.html
+        &lt;/pre&gt;
+        &lt;hr&gt;
+        &lt;!-- LISTA --&gt;
+        &lt;h2&gt;Lista&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Elemento 1&lt;/li&gt; &lt;li&gt;Elemento 2&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;hr&gt;
+        &lt;!-- LISTA NUMERADA --&gt;
+        &lt;h2&gt;Pasos&lt;/h2&gt;
+        &lt;ol&gt;
+            &lt;li&gt;Paso 1&lt;/li&gt;  &lt;li&gt;Paso 2&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;hr&gt;
+        &lt;!-- ENLACE --&gt;
+        &lt;h2&gt;Vínculo&lt;/h2&gt;
+        &lt;a href="https://ejemplo.com" target="_blank"&gt;
+            Abrir enlace externo
+        &lt;/a&gt;
+    &lt;/section&gt;
+    &lt;hr&gt;
+    &lt;!-- FOOTER --&gt;
+    &lt;footer&gt;
+        &lt;h2&gt;© Mi Proyecto&lt;/h2&gt;
+        &lt;a href="#inicio"&gt;Volver al inicio&lt;/a&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </details>
+            
+                    <a href="#inicio">Volver al inicio</a>
+
+<hr>
+
+
           <!-- PIE DE PÁGINA -->
+                  <section id="git">
+
+          
+    <h1>10. Paso a paso para publicar mi sitio web en GitHub</h1>
+
+    <h2>paso 1. Organizar mis archivos</h2>
+
+    <p>Primero debemos tener todos nuestros archivos organizados
+    dentro de una misma carpeta.</p>
+
+    <pre>
+Mi página/
+│
+├── SetGame.html
+│
+├── audio/
+│   └── ... (audios.mp3)
+│
+├── imágenes/
+│   └── ... (archivos.png)
+│
+└── videos/
+    └── ... (videos.mp4)
+    </pre>
+
+    <p>Es importante conservar los nombres de las carpetas
+    y archivos para que HTML pueda encontrarlos.</p>
+
+
+
+    <h2>paso 2. Crear un repositorio en GitHub</h2>
+
+    <ol>
+        <li>Entrar a <a href="https://github.com/">GitHub</a>.</li>
+        <li>Iniciar sesión en mi cuenta.</li>
+        <li>Presionar el botón <b>New repository</b>.</li>
+        <li>Escribir un nombre para mi repositorio.</li>
+        <li>Seleccionar la opción <b>Public</b>.</li>
+        <li>Presionar <b>Create repository</b>.</li>
+    </ol>
+
+  
+
+    <h2>paso 3. Subir mis archivos</h2>
+
+    <ol>
+        <li>Abrir el repositorio que acabo de crear.</li>
+        <li>Presionar <b>Add file</b>.</li>
+        <li>Seleccionar <b>Upload files</b>.</li>
+        <li>Arrastrar los archivos y carpetas de mi página.</li>
+        <li>Verificar que se hayan subido correctamente.</li>
+        <li>Presionar <b>Commit changes</b>.</li>
+    </ol>
+
+ 
+
+    <h2>paso 4. Activar GitHub Pages</h2>
+
+    <ol>
+        <li>Entrar a la sección <b>Settings</b> del repositorio.</li>
+        <li>Buscar la opción <b>Pages</b>.</li>
+        <li>En Build and deployment seleccionar <b>Deploy from a branch</b>.</li>
+        <li>En Branch seleccionar <b>main</b>.</li>
+        <li>En la carpeta seleccionar <b>/ (root)</b>.</li>
+        <li>Presionar <b>Save</b>.</li>
+    </ol>
+
+    <hr>
+
+    <h2>paso 5. Abrir mi página web</h2>
+
+    <p>GitHub comenzará a publicar mi página.
+    Cuando termine, aparecerá un enlace en la sección Pages.</p>
+
+    <p>Su dirección tendrá esta estructura:</p>
+
+    <pre>
+https://USUARIO.github.io/REPOSITORIO/
+    </pre>
+
+    <p>Si mi archivo principal se llama index.html,
+    puedo entrar directamente mediante:</p>
+
+    <pre>
+https://USUARIO.github.io/REPOSITORIO/index.html
+    </pre>
+
+ 
+
+    <h2>paso 6. Comprobar que todo funcione</h2>
+
+    <ul>
+        <li>Comprobar que mi página abra correctamente.</li>
+        <li>Verificar que las imágenes aparezcan.</li>
+        <li>Comprobar que los audios funcionen.</li>
+        <li>Revisar que los videos se reproduzcan.</li>
+        <li>Verificar que los enlaces funcionen.</li>
+    </ul>
+
+    <p><b>GitHub Pages permite alojar páginas web estáticas
+    gratuitamente.</b></p>
+        <a href="#inicio">Volver al inicio</a>
+
+    <hr>
+
     
     <footer>
 
